@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Agent AIKa</title>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <div id="content" class="col-md-12">
+            <div id="title">
+                <h3 class="mt-3">Agent AIKa</h1>
+                <p>Selecciona una opción del menú para ver los capitulos.</p>
+            </div>
+            <div class="iframe-container"></div>
+        </div>
+        
+    </div>
+    <button id="toggleSidebar" class="btn btn-primary btn-floating">
+        &#9776;
+    </button>
+    <div id="sidebar" class="sidebar">
+        <img src="img/logo.png" alt="Logo" class="sidebar-logo"> <!-- Asegúrate de cambiar la ruta a la imagen -->
+        <h6>Agent AIKa</h6>
+        <hr class="sidebar-divider"> <!-- Separador -->
+        <ul id="optionsList" class="list-unstyled">
+            <li class="collapsible">
+                <a href="#" class="toggle saga">AIKa <span class="year">(1997)</span></a>
+                <ul class="nested">
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/Tb5mAYqL#4w0t7NflUUdpL-RpexSvT5B1GhcYpevukKdIHG8Mupk"><span class="episode">1.</span> Trial 1 - Una bella agente</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/zXxU0SIQ#MJkoYS3F4k1nNPSD5LlUwsrKX5ccBU1IxpVuznFUJbU"><span class="episode">2.</span> Trial 2 - Misión desnuda</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/2DpWlAoI#BliMxlM3JS3eLntHu2SiAr4e_HKG82Z_rWMa4XIUjLo"><span class="episode">3.</span> Trial 3 - Posición de despegue</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/jagiWQKb#E5wf3g4q8UFjrdms-x3jA8q1ETGFr-ZtIJy5y2P2dAw"><span class="episode">4.</span> Trial 4 - Floreciendo en el espacio</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/vGxW0A6I#y2WO3AGunGVli-An6Qfj6O3IiTQGkwbfwlI_TKTKdEI"><span class="episode">5.</span> Trial 5 - La venganza del ejército</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/GXggGA7D#kesg4SgDSffJsTXotGXtch6UWSCfvPHqIIcFq5pzoPU"><span class="episode">6.</span> Trial 6 - Operación Delmo Blanco Plateado</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/3eoWmYbY#zrj3ObqnFXG-RQt3x4Zx7hwPIfx_bMjwARgsRSuEm2M"><span class="episode">7.</span> Trial 7 - La batalla decisiva en la base Delmo</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/3L52zSKC#bAERomOZ05S4yC3mnxX6H7Brj9Cu5Nn4R35VcN-N0Kg"><span class="episode">8.</span> Special Trial - Movimientos</a></li>
+                </ul>
+            </li>
+            <li class="collapsible">
+                <a href="#" class="toggle saga">AIKa R-16: Virgin Mission <span class="year">(2007)</span></a>
+                <ul class="nested">
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/V9RHXIbR#PJQQ-7ZzERdwQ8xX2XeHaGMNQyebom5OHhO5_mzt2mM"><span class="episode">1.</span> VIRGIN MISSION 1: Secret Game</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/l5AlDCaR#gyBQTt6SomectjyMhLJ-RRahFkV88qLHQgf7lhGG-6c"><span class="episode">2.</span> VIRGIN MISSION 2: Peach Peach Beach</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/N5YBmC6C#Uc6Ltu0DRvRghqmqoxcWwiWIuSy61U7FebIT4wcirc4"><span class="episode">3.</span> VIRGIN MISSION 3: Deep Blue Girl</a></li>
+                </ul>
+            </li>
+            <li class="collapsible">
+                <a href="#" class="toggle saga">AIKa Zero <span class="year">(2009)</span></a>
+                <ul class="nested">
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/ggABDCaS#BZ1v0lR3ALhEkmKfFHOar39YgEzFB8rfAbWsjMgoIh0"><span class="episode">1.</span> Episodio 1: Caballeros blancos</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/p8QHWIBK#iY0GXucGDbM2FrpfJdCMwmrN7ncW0MJShi068PRFh_M"><span class="episode">2.</span> Episodio 2: E.T.A.I.</a></li>
+                    <li><a href="#" class="option" data-content="https://mega.nz/embed/NhITDAAA#pAlmPT8zEcv48YXH9N1vUucqgDc0oSbmL4U7j_oCcrg"><span class="episode">3.</span> Episodio 3: Zero</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

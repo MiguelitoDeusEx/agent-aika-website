@@ -1,0 +1,117 @@
+body {
+    background-color: #121212; /* Color de fondo oscuro */
+    color: #ffffff; /* Color de texto claro */
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Oculto por defecto */
+    width: 400px; /* Ancho fijo del sidebar */
+    max-width: 100%; /* Se ajusta a la pantalla en resoluciones menores */
+    height: 100%;
+    background-color: #1e1e1e; /* Color de fondo del sidebar */
+    box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto; /* Habilita el desplazamiento vertical */
+}
+
+
+.sidebar.active {
+    right: 0; /* Muestra el sidebar */
+}
+
+.sidebar img.sidebar-logo {
+    max-width: 150px; /* Ancho máximo de la imagen */
+    max-height: 40px; /* Alto máximo de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+.sidebar h6 {
+    color: #ffffff; /* Color de texto del título del sidebar */
+}
+
+.sidebar .sidebar-divider {
+    border: 1px solid #444444; /* Color del separador */
+    margin: 10px 0; /* Espacio arriba y abajo del separador */
+}
+
+.sidebar a {
+    color: #ffffff; /* Color de texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.saga {
+    font-weight: bold;
+}
+
+.episode {
+    color: rgb(143, 143, 143); 
+    font-weight: bold;
+}
+
+.year {
+    font-weight: normal;
+    font-size: x-small;
+}
+
+.sidebar a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+/* Estilos para los elementos de la lista */
+#optionsList li {
+    white-space: nowrap; /* Evita que el texto haga saltos de línea */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    text-overflow: ellipsis; /* Muestra puntos suspensivos (...) */
+}
+
+.nested {
+    display: none; /* Oculta las listas anidadas por defecto */
+    padding-left: 15px; /* Espaciado a la izquierda */
+}
+
+.nested.active {
+    display: block; /* Muestra la lista anidada cuando está activa */
+}
+
+
+.btn-floating {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%; /* Ancho máximo del contenedor */
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .iframe-container {
+        width: 100%; /* Mantiene el ancho del contenedor al 100% en pantallas menores a 600px */
+        padding-top: 56.25%;
+    }
+}
+
+@media (min-width: 601px) {
+    .iframe-container {
+        width: 50%; /* Se asegura que el ancho sea 100% también para pantallas más anchas */
+        padding-top: 28.125%;
+    }
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Ancho del iframe igual al ancho del contenedor */
+    height: 100%; /* Altura del iframe igual a la altura del contenedor */
+    border: 0; /* Sin borde */
+}
+
