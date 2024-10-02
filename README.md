@@ -1,2 +1,5 @@
-## Video HUB de Agent AIKa
-[![](https://clipart-library.com/img/2070920.png)](https://MiguelitoDeusEx.github.io/agent-aika-website/)
+## Video HUB
+![Agent AIKa](https://github.com/MiguelitoDeusEx/agent-aika-website/raw/master/img/logo.png)
+
+👉 [**LIVE DEMO**](https://MiguelitoDeusEx.github.io/agent-aika-website/) 👈
+
