@@ -19,15 +19,49 @@ document.addEventListener('DOMContentLoaded', function () {
             const newContent = this.getAttribute('data-content');
             
             let newSaga = "";
-            const elem = item.parentElement.parentElement.previousElementSibling;
-            if (elem && elem.tagName === 'A' && elem.classList.contains('saga')) {
-                newSaga = elem.innerHTML;
+
+            // Consigo el nombre de la saga
+            const elemSaga = item.parentElement.parentElement.previousElementSibling;
+            if (elemSaga && elemSaga.tagName === 'A' && elemSaga.classList.contains('saga')) {
+                newSaga = elemSaga.innerHTML;
             }
 
             const newEpisode = this.innerHTML;
             title.innerHTML = `<h3 class="mt-3">${newSaga}</h3> <h5>${newEpisode}</h5>`;
-            content.innerHTML = `<iframe src="${newContent}" frameborder="0" allowfullscreen></iframe>`;
+
+            content.innerHTML = `<button id="prevEpisode" class="nav-button left"><i class="bi bi-caret-left-fill"></i></button>
+            <iframe src="${newContent}" frameborder="0" allowfullscreen></iframe>
+            <button id="nextEpisode" class="nav-button right"><i class="bi bi-caret-right-fill"></i></button>`;
+
+            // Linkeo el episodio anterior si existe
+            if (item.parentElement.previousElementSibling != null) {
+                const elemPrevEpisode = item.parentElement.previousElementSibling.firstChild;
+                if (elemPrevEpisode && elemPrevEpisode.tagName === 'A' && elemPrevEpisode.classList.contains('option')) {
+                    document.getElementById('prevEpisode').addEventListener('click', function() {
+                        elemPrevEpisode.click();
+                    });
+                } else {
+                    document.getElementById('prevEpisode').style.display = 'none';
+                }
+            } else {
+                document.getElementById('prevEpisode').style.display = 'none';
+            }
             
+
+            // Linkeo el episodio siguiente si existe
+            if (item.parentElement.nextElementSibling != null) {
+                const elemNextEpisode = item.parentElement.nextElementSibling.firstChild;
+                if (elemNextEpisode && elemNextEpisode.tagName === 'A' && elemNextEpisode.classList.contains('option')) {
+                    document.getElementById('nextEpisode').addEventListener('click', function() {
+                        elemNextEpisode.click();
+                    });
+                } else {
+                    document.getElementById('nextEpisode').style.display = 'none';
+                }
+            } else {
+                document.getElementById('nextEpisode').style.display = 'none';
+            }
+
             // Colapsar el sidebar después de seleccionar una opción
             sidebar.classList.remove('active');
         });
